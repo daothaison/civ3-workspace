@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y --force-yes \
         php7.1-cli \
         php7.1-common \
         php7.1-curl \
+        php-curl \
         php7.1-json \
         php7.1-xml \
         php7.1-mbstring \
