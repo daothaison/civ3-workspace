@@ -84,12 +84,14 @@ RUN curl -s http://getcomposer.org/installer | php \
         'phpmetrics/phpmetrics' \
         'pdepend/pdepend' \
         'phpmd/phpmd' \
-        'sebastian/phpcpd'
+        'sebastian/phpcpd' \
+	'phpunit/phpunit'
 # Create symlinks
 RUN ln -s /root/.composer/vendor/bin/phpcs /usr/bin/phpcs \
     && ln -s /root/.composer/vendor/bin/pdepend /usr/bin/pdepend \
     && ln -s /root/.composer/vendor/bin/phpmetrics /usr/bin/phpmetrics \
     && ln -s /root/.composer/vendor/bin/phpmd /usr/bin/phpmd \
+    && ln -s /root/.composer/vendor/bin/phpunit /usr/bin/phpunit \
     && ln -s /root/.composer/vendor/bin/phpcpd /usr/bin/phpcpd
 
 # install Framgia PHP Standards Checker
