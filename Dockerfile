@@ -79,7 +79,7 @@ RUN apt-get install -y ruby ruby-dev \
 # PHPMetrics, PHPDepend, PHPMessDetector, PHPCopyPasteDetector
 RUN curl -s http://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
-    && composer global require 'squizlabs/php_codesniffer=2.0.0' \
+    && composer global require 'squizlabs/php_codesniffer=3.0.0' \
         'phpmetrics/phpmetrics' \
         'pdepend/pdepend' \
         'phpmd/phpmd' \
@@ -90,7 +90,8 @@ RUN ln -s /root/.composer/vendor/bin/phpcs /usr/bin/phpcs \
     && ln -s /root/.composer/vendor/bin/phpmetrics /usr/bin/phpmetrics \
     && ln -s /root/.composer/vendor/bin/phpmd /usr/bin/phpmd \
     && ln -s /root/.composer/vendor/bin/phpcpd /usr/bin/phpcpd
-# install phpcs
+
+# install Framgia PHP Standards Checker
 RUN cd ~ \
     ; cd ~/.composer/vendor/squizlabs/php_codesniffer/src/Standards/ \
     ; git clone https://github.com/wataridori/framgia-php-codesniffer.git Framgia
