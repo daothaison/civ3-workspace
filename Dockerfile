@@ -102,6 +102,8 @@ RUN cd ~ \
 # Install framgia-ci-tool
 RUN curl -o /usr/bin/framgia-ci https://raw.githubusercontent.com/daothaison/ci-cli/master/dist/framgia-ci \
     && chmod +x /usr/bin/framgia-ci
+    
+RUN echo done
 
 # Clean up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
