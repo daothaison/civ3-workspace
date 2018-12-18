@@ -100,7 +100,7 @@ RUN cd ~ \
     ; git clone https://github.com/wataridori/framgia-php-codesniffer.git Framgia
 
 # Install framgia-ci-tool
-RUN curl -o /usr/bin/framgia-ci https://raw.githubusercontent.com/daothaison/ci-cli/master/dist/framgia-ci \
+RUN curl -o /usr/bin/framgia-ci https://raw.githubusercontent.com/framgiaci/framgia-ci-cli/master/dist/framgia-ci \
     && chmod +x /usr/bin/framgia-ci
     
 RUN echo done
